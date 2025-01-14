@@ -39,4 +39,3 @@
     </script>
 </body>
 </html>
-[student_data.json](https://github.com/user-attachments/files/18407933/student_data.json)
