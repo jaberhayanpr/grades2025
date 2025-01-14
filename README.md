@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
@@ -43,6 +44,15 @@
             margin-top: 20px;
             white-space: pre-wrap;
         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>نظام استعلام درجات الطلاب</h1>
+        <input type="number" id="studentNumber" placeholder="أدخل رقم الطالب">
+        <button onclick="lookupGrades()">استعلام عن الدرجات</button>
+        <div id="result"></div>
+    </div>
     <script>
         let studentGrades = {};
         fetch('student_data.json')
