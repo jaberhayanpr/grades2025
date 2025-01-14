@@ -10,9 +10,9 @@
 <body>
     <div class="container">
         <h1>نظام استعلام درجات الطلاب</h1>
-        <input type="number" id="studentNumber" placeholder="أدخل رقم الطالب">
+        <input type="number" id="number" placeholder="أدخل رقم الطالب">
         <button onclick="lookupGrades()">استعلام عن الدرجات</button>
-        <div id="result"></div>
+        <div id="Grades"></div>
     </div>
 
     <script>
@@ -27,10 +27,10 @@
             .catch(error => console.error('Error loading student data:', error));
 
         function lookupGrades() {
-            const studentNumber = document.getElementById('studentNumber').value;
-            const result = document.getElementById('result');
-            if (studentGrades.hasOwnProperty(studentNumber)) {
-                result.textContent = studentGrades[studentNumber];
+            const studentNumber = document.getElementById('Number').value;
+            const result = document.getElementById('Grades');
+            if (studentGrades.hasOwnProperty(Number)) {
+                result.textContent = studentGrades[Number];
             } else {
                 result.textContent = "لم يتم العثور على درجات لهذا الرقم الطالبي.";
             }
