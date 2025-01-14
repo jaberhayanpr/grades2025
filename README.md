@@ -9,7 +9,7 @@
         <h1>نظام استعلام درجات الطلاب</h1>
         <input type="number" id="studentNumber" placeholder="أدخل رقم الطالب">
         <button onclick="lookupGrades()">استعلام عن الدرجات</button>
-        <div id="result"></div>
+        <div id="Grades"></div>
     </div>
     <script>
         let studentGrades = {};
@@ -20,12 +20,12 @@
             })
             .catch(error => console.error('Error loading student data:', error));
         function lookupGrades() {
-            const studentNumber = document.getElementById('studentNumber').value;
-            const result = document.getElementById('result');
-            if (studentGrades[studentNumber]) {
-                result.textContent = studentGrades[studentNumber].Grades;
+            const studentNumber = document.getElementById('number').value;
+            const Grades = document.getElementById('Grades');
+            if (studentGrades[number]) {
+                Grades.textContent = studentGrades[number].Grades;
             } else {
-                result.textContent = "لم يتم العثور على درجات لهذا الرقم الطالبي.";
+                Grades.textContent = "لم يتم العثور على درجات لهذا الرقم الطالبي.";
             }
         }
     </script>
